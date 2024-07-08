@@ -1,0 +1,134 @@
+[
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\mipmap-xxhdpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\mipmap-xxhdpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\mipmap-ldpi-v26_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\mipmap-ldpi-v26\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\mipmap-xxhdpi-v26_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\mipmap-xxhdpi-v26\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\mipmap-xhdpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\mipmap-xhdpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\mipmap-hdpi-v26_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\mipmap-hdpi-v26\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\mipmap-xxxhdpi-v26_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\mipmap-xxxhdpi-v26\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\mipmap-ldpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\mipmap-ldpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\mipmap-hdpi-v26_ic_launcher_monochrome.png.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\mipmap-hdpi-v26\\ic_launcher_monochrome.png"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\mipmap-hdpi-v26_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\mipmap-hdpi-v26\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "io.cordova.hellocordova.app-merged_res-24:/xml_config.xml.flat",
+        "source": "io.cordova.hellocordova.app-main-26:/xml/config.xml"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\mipmap-ldpi-v26_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\mipmap-ldpi-v26\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\mipmap-xhdpi-v26_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\mipmap-xhdpi-v26\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\mipmap-xhdpi-v26_ic_launcher_monochrome.png.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\mipmap-xhdpi-v26\\ic_launcher_monochrome.png"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\mipmap-xxhdpi-v26_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\mipmap-xxhdpi-v26\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\mipmap-xxxhdpi-v26_ic_launcher_monochrome.png.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\mipmap-xxxhdpi-v26\\ic_launcher_monochrome.png"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\mipmap-xxhdpi-v26_ic_launcher_monochrome.png.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\mipmap-xxhdpi-v26\\ic_launcher_monochrome.png"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\mipmap-xhdpi-v26_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\mipmap-xhdpi-v26\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\xml_config.xml.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\xml\\config.xml"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\mipmap-mdpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\mipmap-mdpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\mipmap-ldpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\mipmap-ldpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\mipmap-mdpi-v26_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\mipmap-mdpi-v26\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\drawable_ic_cdv_splashscreen.xml.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\drawable\\ic_cdv_splashscreen.xml"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\mipmap-xxxhdpi-v26_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\mipmap-xxxhdpi-v26\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\mipmap-mdpi-v26_ic_launcher_monochrome.png.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\mipmap-mdpi-v26\\ic_launcher_monochrome.png"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\mipmap-xxxhdpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\mipmap-xxxhdpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\mipmap-mdpi-v26_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\mipmap-mdpi-v26\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\xml_camera_provider_paths.xml.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\xml\\camera_provider_paths.xml"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-merged_res-24:\\mipmap-hdpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\haron\\.gradle\\daemon\\7.6\\io.cordova.hellocordova.app-main-26:\\mipmap-hdpi-v26\\ic_launcher.xml"
+    }
+]

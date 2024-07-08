@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajout de Livre</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" rel="stylesheet">
+    <style>
+        .form-group {
+            margin-bottom: 20px;
+        }
+        #imagePreview img {
+            max-width: 100%;
+            max-height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>Ajout de Livre</h2>
+    <form action="#" method="post" enctype="multipart/form-data" id="bookForm">
+        <!-- Titre du livre -->
+        <div class="form-group">
+            <label for="titre">Titre du livre :</label>
+            <input type="text" class="form-control" id="titre" name="titre" required>
+        </div>
+        <!-- Auteur du livre -->
+        <div class="form-group">
+            <label for="auteur">Auteur :</label>
+            <input type="text" class="form-control" id="auteur" name="auteur" required>
+        </div>
+        <!-- Illustration du livre -->
+        <div class="form-group mt-3 mb-2">
+            <label for="illustration">Illustration :</label>
+            <input type="file" accept="image/*" class="form-control-file" id="illustration" name="illustration" onchange="previewImage(event)" required>
+        </div>
+        <!-- Div pour afficher l'image sélectionnée -->
+        <div class="form-group">
+            <label>Image sélectionnée :</label>
+            <div id="imagePreview"></div>
+        </div>
+        <!-- Bouton "Cropped" caché par défaut -->
+        <button type="button" class="btn btn-primary" id="croppedButton" onclick="getCroppedImage()" style="display: none;">Cropped</button>
+        <div class="form-group mt-3">
+            <button type="button" class="btn btn-primary" onclick="captureImage()">Prendre une photo</button>
+        </div>
+        <div class="form-group mt-3">
+            <button type="submit" class="btn btn-success">Ajouter le livre</button>
+        </div>
+    </form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+<script>
+    var cropper;
+
+    function previewImage(event) {
+        var reader = new FileReader();
+        reader.onload = function(){
+            var output = document.getElementById('imagePreview');
+            output.innerHTML = '<img id="image" src="' + reader.result + '" class="img-fluid">';
+            document.getElementById('croppedButton').style.display = 'block';
+            // Initialiser le cropper
+            var image = document.getElementById('image');
+            cropper = new Cropper(image, {
+                aspectRatio: 16 / 9,
+                viewMode: 1,
+            });
+        }
+        reader.readAsDataURL(event.target.files[0]);
+    }
+
+    function getCroppedImage() {
+        if (typeof cropper !== 'undefined') {
+            var croppedCanvas = cropper.getCroppedCanvas();
+            var croppedImage = document.createElement('img');
+            croppedImage.src = croppedCanvas.toDataURL();
+            var output = document.getElementById('imagePreview');
+            output.innerHTML = '';
+            output.appendChild(croppedImage);
+            // Réinitialiser Cropper après avoir obtenu l'image recadrée
+            cropper.destroy();
+            document.getElementById('croppedButton').style.display = 'none'; // Masquer le bouton "Cropped"
+        }
+    }
+
+    // Fonction pour capturer une image depuis la caméra
+    function captureImage() {
+        var video = document.createElement('video');
+        var canvas = document.createElement('canvas');
+        var context = canvas.getContext('2d');
+        var stream;
+
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function(s) {
+                stream = s;
+                video.srcObject = stream;
+                video.play();
+                video.addEventListener('loadedmetadata', function() {
+                    canvas.width = video.videoWidth;
+                    canvas.height = video.videoHeight;
+                    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+                    var imageDataURL = canvas.toDataURL('image/png');
+                    var output = document.getElementById('imagePreview');
+                    output.innerHTML = '<img id="image" src="' + imageDataURL + '" class="img-fluid">';
+                    document.getElementById('croppedButton').style.display = 'block';
+                    // Initialiser le cropper
+                    var image = document.getElementById('image');
+                    cropper = new Cropper(image, {
+                        aspectRatio: 16 / 9,
+                        viewMode: 1,
+                    });
+                    stream.getTracks().forEach(function(track) {
+                        track.stop();
+                    });
+                });
+            })
+            .catch(function(err) {
+                console.error('Erreur de capture vidéo:', err);
+            });
+    }
+
+    // Écouteur d'événement pour le formulaire de soumission
+    document.getElementById('bookForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Récupérer les données du formulaire et envoyer vers le serveur
+        var formData = new FormData(this);
+        fetch('/books', {
+            method: 'POST',
+            body: formData
+        })
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            console.log('Réponse du serveur:', data);
+            // Réinitialiser le formulaire ou afficher un message de réussite
+            document.getElementById('bookForm').reset();
+        })
+        .catch(function(error) {
+            console.error('Erreur lors de l\'envoi des données:', error);
+        });
+    });
+</script>
+</body>
+</html>

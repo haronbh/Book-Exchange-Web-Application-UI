@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Liste des auteurs</title>
+        <!-- Bootstrap CSS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.min.js"></script>
+        <link rel="shortcut icon" type="x-icon" href="image/logo.png">
+   
+        <style>
+          .card {
+            margin-bottom: 20px;
+          }
+         
+              .site-footer{
+                  padding: 5em 0;
+                  background-color: rgb(16, 16, 142);
+                  font-size: 14px;
+                  color: white;
+              }
+              .site-footer a{
+                
+                  color: bisque;
+                  border-bottom: 1px solid transparent;
+              }
+              .site-footer .footer-link li{
+                 text-decoration: none;
+                 margin-bottom: 15px;
+              }
+              .h2{
+                  margin-bottom: 150px;
+              }
+
+
+         
+        </style>
+      </head>
+<body>
+   <!--NAV BAR -->
+    <nav class="navbar navbar-expand-lg " style="background-color: rgb(16, 16, 142);">
+        <div class="container-fluid">
+          <button class="navbar-toggler" style=" border-color: transparent;  " type="button" data-bs-toggle="collapse" data-bs-target="#items" aria-controls="items" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style="background-color:white"></span>
+          </button>
+          <div class="collapse navbar-collapse text-center align-item" id="items">
+            <a class="navbar-brand" href="#"><img src="image/logo.png" alt="Logo" width="100" height="50"></a>
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0"> 
+                <li class="nav-item me-3">
+                <a class="nav-link active text-white" style="font-weight: bold;" aria-current="page" href="index.html">Accueil</a>
+              </li>
+              <li class="nav-item me-3">
+                <a class="nav-link text-white" style="font-weight: bold;" href="auteurs.html">Auteurs</a>
+              </li>
+              <li class="nav-item me-3">
+                <a class="nav-link text-white"  style="font-weight: bold;" href="livres.html">Livres</a>
+              </li>
+              <li class="nav-item me-3">
+                <a class="nav-link text-white" style="font-weight: bold;" href="utilisateurs.html">Utilisateurs</a>
+              </li>
+              <li class="nav-item me-3">
+                <a class="nav-link text-white" style="font-weight: bold;"  href="#">Mon compte</a>
+              </li>
+            </ul>
+            <form class="d-flex ms-2" role="search">
+              <input class="form-control me-2" type="search" placeholder="Chercher" aria-label="Search">
+              <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Rechercher</button>
+
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="container mt-5">
+        <h2>Ajout d'un livre usagé</h2>
+        <form action="#" method="post" enctype="multipart/form-data" id="bookForm">
+            
+            <!-- Titre du livre -->
+            <div class="form-group">
+                <label for="titre">Titre du livre :</label>
+                <input type="text" class="form-control" id="titre" name="titre" required>
+            </div>
+            
+            <!-- Auteur du livre -->
+            <div class="form-group">
+                <label for="auteur">Auteur :</label>
+                <input type="text" class="form-control" id="auteur" name="auteur" required>
+            </div>
+            
+            <!-- Illustration du livre -->
+            <div class="form-group mt-3 mb-2 " >
+                <label for="illustration">Illustration :</label>
+                <input type="file" accept="image/*" class="form-control-file" id="illustration" name="illustration" onchange="previewImage(event)" required>
+            </div>
+            
+            <!-- Div pour afficher l'image sélectionnée -->
+            <div class="form-group">
+                <label>Image sélectionnée :</label>
+                <div id="imagePreview">
+                  <img id="croppedImage" >
+                  
+                </div>
+            </div>
+            <div class=" mt-3">
+              <!-- Bouton "Cropped" caché par défaut -->
+            <button id="croppedButton"  class="btn btn-primary" onclick="getCroppedImage()" style="display: none;">Regnorer votre image  </button>
+
+          </div>
+          
+          
+            <div class="form-group mt-3">
+                <button type="button" class="btn btn-primary" onclick="captureImage()">Prendre une photo </button>
+            </div>
+            
+           
+            <div class="form-group mt-3">
+                <button type="submit" class="btn btn-success" onclick="saveBook(event)">Ajouter le livre</button>
+            </div>
+        </form>
+    </div>
+    <script>
+       
+        var cropper; 
+
+function previewImage(event) {
+    var reader = new FileReader();
+    reader.onload = function(){
+        var output = document.getElementById('imagePreview');
+        output.innerHTML = '<img id="image" src="' + reader.result + '" class="img-fluid">';
+        
+        // Initialiser le cropper
+        var image = document.getElementById('image');
+        cropper = new Cropper(image, {
+            aspectRatio: 1,
+            viewMode: 1, 
+            autoCropArea: 1, 
+            movable: false, 
+            zoomable: false,
+            rotatable: false,
+        });
+
+        // Afficher le bouton "Cropped" lorsque une image est chargée
+        document.getElementById('croppedButton').style.display = 'block';
+    }
+    reader.readAsDataURL(event.target.files[0]);
+}
+
+function getCroppedImage() {
+    if (typeof cropper !== 'undefined') {
+        var croppedCanvas = cropper.getCroppedCanvas();
+        var croppedImage = document.createElement('img');
+        croppedImage.src = croppedCanvas.toDataURL();
+        
+        // affichage de la nouvelle image choisie
+        var output = document.getElementById('imagePreview');
+        output.innerHTML = '';
+        output.appendChild(croppedImage);
+    }
+}
+
+
+    
+        // Fonction pour capturer une image depuis la caméra
+        function captureImage() {
+    var video = document.createElement('video');
+    var canvas = document.createElement('canvas');
+    var context = canvas.getContext('2d');
+    var stream;
+
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function(s) {
+            stream = s;
+            video.srcObject = stream;
+            video.play();
+            video.addEventListener('loadedmetadata', function() {
+                canvas.width = video.videoWidth;
+                canvas.height = video.videoHeight;
+                context.drawImage(video, 0, 0, canvas.width, canvas.height);
+                var imageDataURL = canvas.toDataURL('image/png');
+                var output = document.getElementById('imagePreview');
+                output.innerHTML = '<img id="image" src="' + imageDataURL + '" class="img-fluid">';
+                
+                // Initialiser le cropper
+                var image = document.getElementById('image');
+                cropper = new Cropper(image, {
+                    aspectRatio: 1,
+                    viewMode: 1,
+                    autoCropArea: 1,
+                    movable: false,
+                    zoomable: false,
+                    rotatable: false,
+                });
+                document.getElementById('croppedButton').style.display = 'block';
+                
+                stream.getTracks().forEach(function(track) {
+                    track.stop();
+                });
+            });
+        })
+        .catch(function(err) {
+            console.error('Erreur de capture vidéo:', err);
+        });
+}
+
+
+
+
+        // local storage 
+  /*  function saveBook(event) {
+
+       event.preventDefault(); 
+    var titre = document.getElementById('titre').value;
+    var auteur = document.getElementById('auteur').value;
+    var illustration = document.getElementById('illustration').files[0].name;
+    localStorage.setItem('titre',titre);
+    localStorage.setItem('auteur',auteur );
+    localStorage.setItem('photo', illustration);
+        
+        //serveur  book
+       
+        let bookForm = document.getElementById("bookForm");
+        bookForm.onsubmit = (livre) => {
+            livre.preventDefault();
+            let book = new bookForm(bookForm);
+            fetch("/books",{
+                method : "POST",
+                body : book
+            }) } */
+            function saveBook(event) {
+        event.preventDefault(); 
+        var titre = document.getElementById('titre').value;
+        var auteur = document.getElementById('auteur').value;
+        var illustration = document.getElementById('illustration').files[0];
+        
+        // Création d'un objet FormData pour envoyer les données
+        var formData = new FormData();
+        formData.append('titre', titre);
+        formData.append('auteur', auteur);
+        formData.append('illustration', illustration);
+
+        // Envoi des données vers le serveur distant
+        fetch("/books", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Réponse du serveur:', data);
+            // Affichez un message ou redirigez l'utilisateur après l'ajout du livre
+        })
+        .catch(error => {
+            console.error('Erreur:', error);
+        });
+    }
+
+    // Écouteur d'événement pour le bouton "Ajouter le livre"
+    var addButton = document.querySelector('button[type="submit"]');
+    addButton.addEventListener('click', saveBook);
+    
+    </script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Cropper.js -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+
+</body>
+</html>

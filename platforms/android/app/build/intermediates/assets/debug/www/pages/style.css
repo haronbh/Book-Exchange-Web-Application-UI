@@ -1,0 +1,29 @@
+/* Styles spécifiques pour le logo de la navbar */
+.navbar-brand {
+    font-size: 24px; /* Redimensionne la taille du texte du logo */
+    font-weight: bold; /* Rend le texte du logo en gras */
+    color: #333; /* Change la couleur du texte du logo */
+}
+
+/* Styles spécifiques pour le bouton de recherche */
+.form-control {
+    border-radius: 20px; /* Ajoute un bord arrondi au champ de recherche */
+}
+
+/* Styles spécifiques pour les titres des cartes */
+.card-title {
+    color: #d15321; /* Change la couleur du titre de la carte en bleu */
+    font-weight: bold; /* Rend le titre de la carte en gras */
+}
+
+/* Styles spécifiques pour les descriptions des cartes */
+.card-text {
+    color: #555; /* Change la couleur du texte de la carte en gris */
+}
+
+/* Styles spécifiques pour le pied de page */
+footer {
+    background-color: #f8f9fa; /* Change la couleur de fond du pied de page */
+    color: #333; /* Change la couleur du texte du pied de page */
+    padding: 20px 0; /* Ajoute un espace autour du contenu du pied de page */
+}

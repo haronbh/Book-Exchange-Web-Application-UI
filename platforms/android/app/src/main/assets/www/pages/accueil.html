@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil - Free Book Exchange</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css"> 
+</head>
+
+<body>
+<header>
+<!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Free Book Exchange</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavMobile"
+          aria-controls="navbarNavMobile" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavMobile">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="accueil.html">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="auteurs.html">Auteurs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="books.html">Livres</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="users.html">Utilisateurs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="moncompte.html">Mon compte</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Recherche">
+            <button class="btn btn-outline-success" type="submit">Recherche</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+</header>
+
+  <!-- Landing page -->
+  <div class="container mt-5">
+    <!-- La classe "mt-5" ajoute une marge en haut de l'élément conteneur, avec un espacement équivalent à 5 unités -->
+    <div class="jumbotron" style="background-color: rgb(241, 201, 221)">
+      <!-- créer un grand composant -->
+      <h1 class="display-4" style="background-color: rgb(202, 198, 240)">Free Book Exchange</h1>
+      <!-- rendre le texte de grande taille et en gras -->
+      <p class="lead">Read for free, give away books to others and receive in return rare ones...</p>
+      <!-- mettre en évidence un paragraphe d'introduction -->
+    </div>
+
+
+
+    <h2>Derniers livres ajoutés</h2>
+    
+    <div class="row">
+      <!--créer une ligne dans une grille-->
+
+
+      <!-- Livre 1 -->
+      <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2" style="background-color: rgb(207, 245, 192)">
+        <!-- Pour les écrans de petite taille (small), chaque colonne occupera la moitié de la largeur disponible sur 12, 1/3, 1/4, 1/6 -->
+        <div class="card">
+          <!-- positionner une image en haut d'une carte -->
+          <div class="card-body" style="background-color: rgb(248, 236, 66)">
+            <h5 class="card-title">Le Secret de la Pyramide</h5>
+            <img src="../images/l1.jpg" class="card-img-top" alt="Book cover">
+            <p class="card-text">Auteur: John Watson</p>
+            <p class="card-text">Editeur: Holmes Publications</p>
+            <p class="card-text">Année: 1985</p>
+            <p class="card-text">Proposé par: Sherlock Holmes</p>
+            <p class="card-text">Description: Une adaptation palpitante des aventures du célèbre détective Sherlock Holmes.</p>
+          </div>
+        </div>
+      </div>
+      <!-- End of Livre 1 -->
+
+      <!-- Livre 2 -->
+      <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2" style="background-color: rgb(207, 245, 192)">
+        <!-- Pour les écrans de petite taille (small), chaque colonne occupera la moitié de la largeur disponible sur 12, 1/3, 1/4, 1/6 -->
+        <div class="card">
+          <div class="card-body" style="background-color: rgb(248, 236, 66)">
+            <h5 class="card-title">Le Seigneur des Anneaux</h5>
+            <img src="../images/l2.jpg" class="card-img-top" alt="Book cover">
+            <p class="card-text">Auteur : J.R.R. Tolkien</p>
+            <p class="card-text">Editeur : Allen & Unwin</p>
+            <p class="card-text">Année: 1954-1955</p>
+            <p class="card-text">Proposé par: user1</p>
+            <p class="card-text">Description: Une trilogie épique de fantasy qui suit la quête de Frodo Baggins pour détruire l'Anneau unique et vaincre le Seigneur des Ténèbres Sauron.</p>
+          </div>
+        </div>
+      </div>
+      <!-- End of Livre 2 -->
+      <!-- Livre 3 -->
+      <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2" style="background-color: rgb(207, 245, 192)">
+        <div class="card">
+          <div class="card-body" style="background-color: rgb(248, 236, 66)">
+            <h5 class="card-title">Harry Potter à l'école des sorciers</h5>
+            <img src="../images/l3.jpg" class="card-img-top" alt="Book cover">
+            <p class="card-text">Auteur: J.K. Rowling</p>
+            <p class="card-text">Editeur: Bloomsbury</p>
+            <p class="card-text">Année: 1997</p>
+            <p class="card-text">Proposé par: Utilisateur3</p>
+            <p class="card-text">Description: Le premier livre de la série Harry Potter, qui raconte l'histoire d'un jeune sorcier nommé Harry Potter et de ses aventures à l'école de sorcellerie Poudlard.</p>
+          </div>
+        </div>
+      </div>
+      <!-- End of Livre 3 -->
+      <!-- Livre 4 -->
+      <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2" style="background-color: rgb(207, 245, 192)">
+        <div class="card">
+          <div class="card-body" style="background-color: rgb(248, 236, 66)">
+            <h5 class="card-title">Orgueil et Préjugés</h5>
+            <img src="../images/l4.jpg" class="card-img-top" alt="Book cover">
+            <p class="card-text">Auteur: Jane Austen</p>
+            <p class="card-text">Editeur: T. Egerton</p>
+            <p class="card-text">Année: 1813</p>
+            <p class="card-text">Proposé par: Utilisateur4</p>
+            <p class="card-text">Description: Un roman classique de la littérature anglaise qui explore les thèmes du mariage, de la classe sociale et de l'amour à travers l'histoire de la famille Bennet.</p>
+          </div>
+        </div>
+      </div>
+      <!-- End of Livre 4 -->
+      <!-- Livre 5 -->
+      <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2" style="background-color: rgb(207, 245, 192)">
+        <div class="card">
+          <div class="card-body" style="background-color: rgb(248, 236, 66)">
+            <h5 class="card-title">Le Petit Prince</h5>
+            <img src="../images/l5.jpg" class="card-img-top" alt="Book cover">
+            <p class="card-text">Auteur: Antoine de Saint-Exupéry</p>
+            <p class="card-text">Editeur: Reynal & Hitchcock</p>
+            <p class="card-text">Année: 1943</p>
+            <p class="card-text">Proposé par: Utilisateur5</p>
+            <p class="card-text">Description: autUn conte philosophique qui suit les aventures d'un jeune prince voyageant d'une planète à l'autreo5</p>
+          </div>
+        </div>
+      </div>
+      <!-- End of Livre 5 -->
+      <!-- Livre 6 -->
+      <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2" style="background-color: rgb(207, 245, 192)">
+        <div class="card">
+          <div class="card-body" style="background-color: rgb(248, 236, 66)">
+            <h5 class="card-title">Le Nom de la Rose</h5>
+            <img src="../images/l6.jpg" class="card-img-top" alt="Book cover">
+            <p class="card-text">Auteur: Umberto Eco</p>
+            <p class="card-text">Editeur: Bompiani</p>
+            <p class="card-text">Année: 1980</p>
+            <p class="card-text">Proposé par: Utilisateur6</p>
+            <p class="card-text">Description: Un roman historique et mystérieux qui se déroule dans un monastère italien au XIVe siècle</p>
+          </div>
+        </div>
+      </div>
+      <!-- End of Livre 6 -->
+
+    </div>
+    <!-- End of row -->
+
+    <!-- Recently exchanged books -->
+    <h2>Derniers livres échangés</h2>
+    <div class="row">
+      <!--créer une ligne dans une grille-->
+      <!-- Cards for latest added books -->
+      <!-- Livre 1 -->
+      <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2" style="background-color: rgb(255, 221, 153)">
+        <!-- Pour les écrans de petite taille (small), chaque colonne occupera la moitié de la largeur disponible sur 12, 1/3, 1/4, 1/6 -->
+        <div class="card">
+          <!-- positionner une image en haut d'une carte -->
+          <div class="card-body" style="background-color: rgb(255, 204, 128)">
+            <h5 class="card-title">Le Secret de la Pyramide</h5>
+            <img src="../images/l1.jpg" class="card-img-top" alt="Book cover">
+            <p class="card-text">Auteur: John Watson</p>
+            <p class="card-text">Editeur: Holmes Publications</p>
+            <p class="card-text">Année: 1985</p>
+            <p class="card-text">Proposé par: Sherlock Holmes</p>
+            <p class="card-text">Description: Une adaptation palpitante des aventures du célèbre détective Sherlock Holmes.</p>
+          </div>
+        </div>
+      </div>
+      <!-- End of Livre 1 -->
+
+      <!-- Livre 2 -->
+      <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2" style="background-color: rgb(255, 221, 153)">
+        <!-- Pour les écrans de petite taille (small), chaque colonne occupera la moitié de la largeur disponible sur 12, 1/3, 1/4, 1/6 -->
+        <div class="card">
+          <!-- positionner une image en haut d'une carte -->
+          <div class="card-body" style="background-color: rgb(255, 204, 128)">
+            <h5 class="card-title">Le Seigneur des Anneaux</h5>
+            <img src="../images/l2.jpg" class="card-img-top" alt="Book cover">
+            <p class="card-text">Auteur : J.R.R. Tolkien</p>
+            <p class="card-text">Editeur : Allen & Unwin</p>
+            <p class="card-text">Année: 1954-1955</p>
+            <p class="card-text">Proposé par: user1</p>
+            <p class="card-text">Description: Une trilogie épique de fantasy qui suit la quête de Frodo Baggins pour détruire l'Anneau unique et vaincre le Seigneur des Ténèbres Sauron.</p>
+          </div>
+        </div>
+      </div>
+      <!-- End of Livre 2 -->
+      <!-- Livre 3 -->
+      <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2" style="background-color: rgb(255, 221, 153)">
+        <div class="card">
+          <div class="card-body" style="background-color: rgb(255, 204, 128)">
+            <h5 class="card-title">Harry Potter à l'école des sorciers</h5>
+            <img src="../images/l3.jpg" class="card-img-top" alt="Book cover">
+            <p class="card-text">Auteur: J.K. Rowling</p>
+            <p class="card-text">Editeur: Bloomsbury</p>
+            <p class="card-text">Année: 1997</p>
+            <p class="card-text">Proposé par: Utilisateur3</p>
+            <p class="card-text">Description: Le premier livre de la série Harry Potter, qui raconte l'histoire d'un jeune sorcier nommé Harry Potter et de ses aventures à l'école de sorcellerie Poudlard.</p>
+          </div>
+        </div>
+      </div>
+      <!-- End of Livre 3 -->
+      <!-- Livre 4 -->
+      <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2" style="background-color: rgb(255, 221, 153)">
+        <div class="card">
+          <div class="card-body" style="background-color: rgb(255, 204, 128)">
+            <h5 class="card-title">Orgueil et Préjugés</h5>
+            <img src="../images/l4.jpg" class="card-img-top" alt="Book cover">
+            <p class="card-text">Auteur: Jane Austen</p>
+            <p class="card-text">Editeur: T. Egerton</p>
+            <p class="card-text">Année: 1813</p>
+            <p class="card-text">Proposé par: Utilisateur4</p>
+            <p class="card-text">Description: Un roman classique de la littérature anglaise qui explore les thèmes du mariage, de la classe sociale et de l'amour à travers l'histoire de la famille Bennet.</p>
+          </div>
+        </div>
+      </div>
+      <!-- End of Livre 4 -->
+      <!-- Livre 5 -->
+      <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2" style="background-color: rgb(255, 221, 153)">
+        <div class="card">
+          <div class="card-body" style="background-color: rgb(255, 204, 128)">
+            <h5 class="card-title">Le Petit Prince</h5>
+            <img src="../images/l5.jpg" class="card-img-top" alt="Book cover">
+            <p class="card-text">Auteur: Antoine de Saint-Exupéry</p>
+            <p class="card-text">Editeur: Reynal & Hitchcock</p>
+            <p class="card-text">Année: 1943</p>
+            <p class="card-text">Proposé par: Utilisateur5</p>
+            <p class="card-text">Description: autUn conte philosophique qui suit les aventures d'un jeune prince voyageant d'une planète à l'autreo5</p>
+          </div>
+        </div>
+      </div>
+      <!-- End of Livre 5 -->
+      <!-- Livre 6 -->
+      <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2" style="background-color: rgb(255, 221, 153)">
+        <div class="card">
+          <div class="card-body" style="background-color: rgb(255, 204, 128)">
+            <h5 class="card-title">Le Nom de la Rose</h5>
+            <img src="../images/l6.jpg" class="card-img-top" alt="Book cover">
+            <p class="card-text">Auteur: Umberto Eco</p>
+            <p class="card-text">Editeur: Bompiani</p>
+            <p class="card-text">Année: 1980</p>
+            <p class="card-text">Proposé par: Utilisateur6</p>
+            <p class="card-text">Description: Un roman historique et mystérieux qui se déroule dans un monastère italien au XIVe siècle</p>
+          </div>
+        </div>
+      </div>
+      <!-- End of Livre 6 -->
+
+    </div>
+    <!-- End of row -->
+
+<!-- Footer -->
+<footer class="text-center text-lg-start mt-5" style="background-color: rgb(174, 211, 247)">
+  <!-- Ajoute une marge de 5 unités en haut du pied de page -->
+  <div class="container p-4">
+      <!-- p-4: remplissage uniforme de 4 unités à l'intérieur du conteneur -->
+      <div class="row" id="tcp">
+          <div class="col-lg-3">
+              <!-- 3 unités de largeur de colonne pour les grands écrans-->
+              <h5>Indications légales</h5>
+              <p>Copyright © 2024 Free Book Exchange. Tous droits réservés.</p>
+              <p>Termes d'utilisation | Vie privée</p>
+          </div>
+          <div class="col-lg-3">
+              <h5>Menu</h5>
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href="accueil.html">Accueil</a></li>
+                  <li class="list-inline-item"><a href="auteurs.html">Auteurs</a></li>
+                  <li class="list-inline-item"><a href="books.html">Livres</a></li>
+                  <li class="list-inline-item"><a href="users.html">Utilisateurs</a></li>
+                  <li class="list-inline-item"><a href="moncompte.html">Mon compte</a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</footer>
+<!-- Scripts -->
+<script src="../js/jquery.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+
+</html>

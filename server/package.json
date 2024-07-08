@@ -1,0 +1,13 @@
+{
+  "name": "nom_du_projet",
+  "version": "1.0.0",
+  "description": "Description du projet",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2"
+  }
+}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auteurs - Free Book Exchange</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> 
+
+</head>
+
+<body>
+    <header>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Free Book Exchange</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavMobile"
+        aria-controls="navbarNavMobile" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavMobile">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="accueil.html">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="auteurs.html">Auteurs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="books.html">Livres</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="users.html">Utilisateurs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="moncompte.html">Mon compte</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Recherche">
+          <button class="btn btn-outline-success" type="submit">Recherche</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+    </header>
+
+    <div class="container">
+        <section class="authors-list">
+            <h1>Liste des auteurs</h1>
+            <div class="row" id="authorsRow">
+                <!-- Cartes des auteurs -->
+<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2" id="author1">
+    <div class="card mb-3" style="background-color: rgb(248, 219, 233)">
+        <img src="../images/a1.jpg" class="card-img-top" alt="Photo de l’auteur">
+        <div class="card-header">
+            <h5 class="card-title">karim (3 livres)</h5>
+        </div>
+        <div class="card-body">
+            <p class="card-text">Pays d'origine: Marroc</p>
+            <p class="card-text">Année de naissance: 1994 - Année de décès: -</p>
+        </div>
+        <!-- Liste des livres de l'auteur -->
+        <ul class="list-group list-group-flush" style="background-color: rgb(206, 255, 174)">
+            <li class="list-group-item"><a href="books.html?auteur=karim">Titre du livre 1</a></li>
+            <li class="list-group-item"><a href="books.html?auteur=karim">Titre du livre 2</a></li>
+            <li class="list-group-item"><a href="books.html?auteur=karim">Titre du livre 3</a></li>
+            <!-- Ajoutez les autres livres ici -->
+        </ul>
+        <div class="card-footer" style="background-color: rgb(159, 158, 255)">
+            <a href="books.html?auteur=karim" class="btn btn-primary" style="background-color: rgb(13, 141, 30)">Voir les livres</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2" id="author2">
+    <div class="card mb-3" style="background-color: rgb(248, 219, 233)">
+        <img src="../images/a2.jpg" class="card-img-top" alt="Photo de l’auteur">
+        <div class="card-header">
+            <h5 class="card-title">salim (4 livres)</h5>
+        </div>
+        <div class="card-body">
+            <p class="card-text">Pays d'origine: Algérie</p>
+            <p class="card-text">Année de naissance: 1991 - Année de décès: -</p>
+        </div>
+        <ul class="list-group list-group-flush" style="background-color: rgb(206, 255, 174)">
+            <li class="list-group-item"><a href="books.html?auteur=salim">Titre du livre 1</a></li>
+            <li class="list-group-item"><a href="books.html?auteur=salim">Titre du livre 2</a></li>
+            <li class="list-group-item"><a href="books.html?auteur=salim">Titre du livre 3</a></li>
+            <li class="list-group-item"><a href="books.html?auteur=salim">Titre du livre 4</a></li>
+        </ul>
+        <div class="card-footer" style="background-color: rgb(159, 158, 255)">
+            <a href="books.html?auteur=salim" class="btn btn-primary" style="background-color: rgb(13, 141, 30)">Voir les livres</a>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2" id="author3">
+    <div class="card mb-3" style="background-color: rgb(248, 219, 233)">
+        <img src="../images/a3.jpg" class="card-img-top" alt="Photo de l’auteur">
+        <div class="card-header">
+            <h5 class="card-title">tarek (3 livres)</h5>
+        </div>
+        <div class="card-body">
+            <p class="card-text">Pays d'origine: Tunis</p>
+            <p class="card-text">Année de naissance: 2000 - Année de décès: -</p>
+        </div>
+        <ul class="list-group list-group-flush" style="background-color: rgb(206, 255, 174)">
+            <li class="list-group-item"><a href="books.html?auteur=tarek">Titre du livre 1</a></li>
+            <li class="list-group-item"><a href="books.html?auteur=tarek">Titre du livre 2</a></li>
+            <li class="list-group-item"><a href="books.html?auteur=tarek">Titre du livre 2</a></li>
+        </ul>
+        <div class="card-footer" style="background-color: rgb(159, 158, 255)">
+            <a href="books.html?auteur=tarek" class="btn btn-primary" style="background-color: rgb(13, 141, 30)">Voir les livres</a>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2" id="author4">
+    <div class="card mb-3" style="background-color: rgb(248, 219, 233)">
+        <img src="../images/a4.jpg" class="card-img-top" alt="Photo de l’auteur">
+        <div class="card-header">
+            <h5 class="card-title">hakim (2 livres)</h5>
+        </div>
+        <div class="card-body">
+            <p class="card-text">Pays d'origine: Tunis</p>
+            <p class="card-text">Année de naissance: 1965 - Année de décès: -</p>
+        </div>
+        <ul class="list-group list-group-flush" style="background-color: rgb(206, 255, 174)">
+            <li class="list-group-item"><a href="books.html?auteur=hakim">Titre du livre 1</a></li>
+            <li class="list-group-item"><a href="books.html?auteur=hakim">Titre du livre 2</a></li>
+        </ul>
+        <div class="card-footer" style="background-color: rgb(159, 158, 255)">
+            <a href="books.html?auteur=hakim" class="btn btn-primary" style="background-color: rgb(13, 141, 30)">Voir les livres</a>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2" id="author5">
+    <div class="card mb-3" style="background-color: rgb(248, 219, 233)">
+        <img src="../images/a5.jpg" class="card-img-top" alt="Photo de l’auteur">
+        <div class="card-header">
+            <h5 class="card-title">fawzi (1 livre)</h5>
+        </div>
+        <div class="card-body">
+            <p class="card-text">Pays d'origine: Egypte</p>
+            <p class="card-text">Année de naissance: 1965 - Année de décès: -</p>
+        </div>
+        <ul class="list-group list-group-flush" style="background-color: rgb(206, 255, 174)">
+            <li class="list-group-item"><a href="books.html?auteur=fawzi">Titre du livre 1</a></li>
+        </ul>
+        <div class="card-footer" style="background-color: rgb(159, 158, 255)">
+            <a href="books.html?auteur=fawzi" class="btn btn-primary" style="background-color: rgb(13, 141, 30)">Voir les livres</a>
+        </div>
+    </div>
+</div>
+</div>
+
+        </section>
+    </div>
+
+<!-- Footer -->
+<footer class="text-center text-lg-start mt-5" style="background-color: rgb(174, 211, 247)">
+    <!-- Ajoute une marge de 5 unités en haut du pied de page -->
+    <div class="container p-4">
+        <!-- p-4: remplissage uniforme de 4 unités à l'intérieur du conteneur -->
+        <div class="row" id="tcp">
+            <div class="col-lg-3">
+                <!-- 3 unités de largeur de colonne pour les grands écrans-->
+                <h5>Indications légales</h5>
+                <p>Copyright © 2024 Free Book Exchange. Tous droits réservés.</p>
+                <p>Termes d'utilisation | Vie privée</p>
+            </div>
+            <div class="col-lg-3">
+                <h5>Menu</h5>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="accueil.html">Accueil</a></li>
+                    <li class="list-inline-item"><a href="auteurs.html">Auteurs</a></li>
+                    <li class="list-inline-item"><a href="books.html">Livres</a></li>
+                    <li class="list-inline-item"><a href="users.html">Utilisateurs</a></li>
+                    <li class="list-inline-item"><a href="moncompte.html">Mon compte</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </footer>
+
+    <!-- Script JavaScript pour trier les auteurs par ordre alphabétique -->
+    <script>
+        // Fonction pour trier les auteurs par ordre alphabétique
+        function sortAuthorsAlphabetically() {
+            var authorsRow = document.getElementById('authorsRow');
+            var authors = authorsRow.children;
+    
+            // Convertir les éléments enfants en tableau
+            var authorsArray = Array.prototype.slice.call(authors);
+    
+            // Trier les auteurs par ordre alphabétique
+            authorsArray.sort(function (a, b) {
+                var nameA = a.querySelector('.card-header h5').innerText.toLowerCase();
+                var nameB = b.querySelector('.card-header h5').innerText.toLowerCase();
+                return nameA.localeCompare(nameB);
+            });
+    
+            // Mettre à jour la disposition des cartes d'auteur dans le DOM
+            authorsArray.forEach(function (author) {
+                authorsRow.appendChild(author);
+            });
+        }
+    
+        // Appeler la fonction pour trier les auteurs au chargement de la page
+        window.onload = sortAuthorsAlphabetically;
+    </script>
+<!-- Scripts -->
+<!-- Scripts -->
+<script src="../js/jquery.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+
+</html>

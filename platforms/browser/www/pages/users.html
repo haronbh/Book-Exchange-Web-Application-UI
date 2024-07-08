@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utilisateurs - Free Book Exchange</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+
+<body>
+    <header>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Free Book Exchange</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavMobile"
+        aria-controls="navbarNavMobile" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavMobile">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="accueil.html">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="auteurs.html">Auteurs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="books.html">Livres</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="users.html">Utilisateurs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Mon compte</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Recherche">
+          <button class="btn btn-outline-success" type="submit">Recherche</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+    </header>
+
+    <div class="container">
+        <!-- Liste des utilisateurs -->
+        <section class="users-list">
+            <h1>Liste des utilisateurs</h1>
+            <div class="row" id="usersRow">
+                <!-- Cartes des utilisateurs -->
+                <!-- 1 utilisateur -->
+                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2" id="user1">
+                    <div class="card mb-3" style="background-color: rgb(245, 166, 209)">
+                        <!-- pour la marge -->
+                        <div class="card-header" style="background-color: rgb(245, 166, 209)">
+                            <h5 class="card-title">Utilisateur 1</h5>
+                        </div>
+                        <div class="card-body" style="background-color: rgb(236, 160, 18)">
+                            <img src="../images/u1.png" class="card-img-top">
+                            <p class="card-text">Email: user1@example.com</p>
+                            <p class="card-text">Adresse: Rue de l'utilisateur 1</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary" style="background-color: rgb(245, 10, 10)">Voir le profil</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2 utilisateur -->
+                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2" id="user2">
+                    <div class="card mb-3" style="background-color: rgb(245, 166, 209)">
+                        <div class="card-header" style="background-color: rgb(245, 166, 209)">
+                            <h5 class="card-title">Utilisateur 2</h5>
+                        </div>
+                        <div class="card-body" style="background-color: rgb(236, 160, 18)">
+                            <img src="../images/u2.png" class="card-img-top">
+                            <p class="card-text">Email: user2@example.com</p>
+                            <p class="card-text">Adresse: Rue de l'utilisateur 2</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary" style="background-color: rgb(245, 10, 10)">Voir le profil</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3 utilisateur -->
+                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2" id="user3">
+                    <div class="card mb-3" style="background-color: rgb(245, 166, 209)">
+                        <div class="card-header" style="background-color: rgb(245, 166, 209)">
+                            <h5 class="card-title">Utilisateur 3</h5>
+                        </div>
+                        <div class="card-body" style="background-color: rgb(236, 160, 18)">
+                            <img src="../images/u3.png" class="card-img-top">
+                            <p class="card-text">Email: user3@example.com</p>
+                            <p class="card-text">Adresse: Rue de l'utilisateur 3</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary" style="background-color: rgb(245, 10, 10)">Voir le profil</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 4 utilisateur -->
+                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2" id="user4">
+                    <div class="card mb-3" style="background-color: rgb(245, 166, 209)">
+                        <div class="card-header" style="background-color: rgb(245, 166, 209)">
+                            <h5 class="card-title">Utilisateur 4</h5>
+                        </div>
+                        <div class="card-body" style="background-color: rgb(236, 160, 18)">
+                            <img src="../images/u4.jpg" class="card-img-top">
+                            <p class="card-text">Email: user4@example.com</p>
+                            <p class="card-text">Adresse: Rue de l'utilisateur 4</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary" style="background-color: rgb(245, 10, 10)">Voir le profil</a>
+                        </div>
+                    </div>
+                </div>
+                <!--5 utilisateur -->
+                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2" id="user5">
+                    <div class="card mb-3" style="background-color: rgb(245, 166, 209)">
+                        <div class="card-header" style="background-color: rgb(245, 166, 209)">
+                            <h5 class="card-title">Utilisateur 5</h5>
+                        </div>
+                        <div class="card-body" style="background-color: rgb(236, 160, 18)">
+                            <img src="../images/u5.png" class="card-img-top">
+                            <p class="card-text">Email: user5@example.com</p>
+                            <p class="card-text">Adresse: Rue de l'utilisateur 5</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary" style="background-color: rgb(245, 10, 10)">Voir le profil</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 6 utilisateur -->
+                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2" id="user6">
+                    <div class="card mb-3" style="background-color: rgb(245, 166, 209)">
+                        <div class="card-header" style="background-color: rgb(245, 166, 209)">
+                            <h5 class="card-title">Utilisateur 6</h5>
+                        </div>
+                        <div class="card-body" style="background-color: rgb(236, 160, 18)">
+                            <img src="../images/u6.png" class="card-img-top">
+                            <p class="card-text">Email: user6@example.com</p>
+                            <p class="card-text">Adresse: Rue de l'utilisateur 6</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary" style="background-color: rgb(245, 10, 10)">Voir le profil</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+<!-- Footer -->
+<footer class="text-center text-lg-start mt-5" style="background-color: rgb(241, 247, 191)">
+    <!-- Ajoute une marge de 5 unités en haut du pied de page -->
+    <div class="container p-4">
+        <!-- p-4: remplissage uniforme de 4 unités à l'intérieur du conteneur -->
+        <div class="row" id="tcp">
+            <div class="col-lg-3">
+                <!-- 3 unités de largeur de colonne pour les grands écrans-->
+                <h5>Indications légales</h5>
+                <p>Copyright © 2024 Free Book Exchange. Tous droits réservés.</p>
+                <p>Termes d'utilisation | Vie privée</p>
+            </div>
+            <div class="col-lg-3">
+                <h5>Menu</h5>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="accueil.html">Accueil</a></li>
+                    <li class="list-inline-item"><a href="auteurs.html">Auteurs</a></li>
+                    <li class="list-inline-item"><a href="books.html">Livres</a></li>
+                    <li class="list-inline-item"><a href="users.html">Utilisateurs</a></li>
+                    <li class="list-inline-item"><a href="#">Mon compte</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </footer>
+<!-- Scripts -->
+<script src="../js/jquery.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+
+</html>

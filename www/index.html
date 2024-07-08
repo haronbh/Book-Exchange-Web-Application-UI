@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajout de Livre</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1 class="mt-5">Ajout de Livre</h1>
+    <form id="addBookForm">
+      <div class="mb-3">
+        <label for="auteur" class="form-label">Auteur</label>
+        <input type="text" class="form-control" id="auteur" required>
+      </div>
+      <div class="mb-3">
+        <label for="editeur" class="form-label">Editeur</label>
+        <input type="text" class="form-control" id="editeur" required>
+      </div>
+      <div class="mb-3">
+        <label for="annee" class="form-label">Année</label>
+        <input type="number" class="form-control" id="annee" required>
+      </div>
+      <div class="mb-3">
+        <label for="propose_par" class="form-label">Proposé par</label>
+        <input type="text" class="form-control" id="propose_par" required>
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea class="form-control" id="description" rows="3" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="illustration" class="form-label">Illustration</label>
+        <div id="photo-preview" class="mt-2">
+          <img id="preview-image" src="#" alt="Preview Image" style="max-width: 100%; max-height: 200px;">
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary" id="take-photo-btn">Prendre une photo</button>
+      <button type="button" class="btn btn-primary" id="choose-photo-btn">Choisir une photo</button>
+      <button type="submit" class="btn btn-success" id="submit-btn">Envoyer</button>
+      <input type="file" accept="image/*" id="hidden-input" style="display: none;">
+    </form>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('#take-photo-btn').click(function() {
+        // Vérifier si le navigateur prend en charge l'accès à la caméra
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+          captureImage();
+        } else {
+          // Afficher un message d'erreur si l'accès à la caméra n'est pas pris en charge
+          alert('Accès à la caméra non pris en charge sur ce navigateur.');
+        }
+      });
+  
+      $('#choose-photo-btn').click(function() {
+        $('#hidden-input').click();
+      });
+  
+      $('#hidden-input').change(function(e) {
+        const file = e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function(e) {
+            resizeAndPreview(e.target.result);
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+  
+      $('#addBookForm').submit(function(e) {
+        e.preventDefault();
+        // Récupérer les données du formulaire
+        const auteur = $('#auteur').val();
+        const editeur = $('#editeur').val();
+        const annee = $('#annee').val();
+        const proposePar = $('#propose_par').val();
+        const description = $('#description').val();
+        const illustration = $('#preview-image').attr('src');
+  
+        // Enregistrer les données localement
+        const bookData = {
+          auteur: auteur,
+          editeur: editeur,
+          annee: annee,
+          proposePar: proposePar,
+          description: description,
+          illustration: illustration
+        };
+        localStorage.setItem('newBook', JSON.stringify(bookData));
+  
+        // Envoyer les données au service distant
+        $.ajax({
+          url: '/books',
+          type: 'POST',
+          contentType: 'application/json',
+          data: JSON.stringify(bookData),
+          success: function(response) {
+            // Afficher les données renvoyées dans la console pour vérification
+            console.log('Données renvoyées par le serveur :', response);
+  
+            // Mettre à jour les champs du formulaire avec les données du livre
+            $('#auteur').val(response.auteur);
+            $('#editeur').val(response.editeur);
+            $('#annee').val(response.annee);
+            $('#propose_par').val(response.proposePar);
+            $('#description').val(response.description);
+            $('#preview-image').attr('src', response.illustration);
+          },
+          error: function(xhr, status, error) {
+            console.error('Erreur lors de l\'envoi des données:', error);
+          }
+        });
+  
+        // Réinitialiser le formulaire
+        $('#addBookForm')[0].reset();
+        $('#photo-preview').empty();
+      });
+    });
+  
+    function captureImage() {
+      // Créer un élément vidéo pour afficher le flux de la caméra
+      var video = document.createElement('video');
+      var canvas = document.createElement('canvas');
+      var context = canvas.getContext('2d');
+      var stream;
+  
+      // Demander l'accès à la caméra
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function(s) {
+          stream = s;
+          video.srcObject = stream;
+          video.play();
+          video.addEventListener('loadedmetadata', function() {
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+            var imageDataURL = canvas.toDataURL('image/png');
+            $('#preview-image').attr('src', imageDataURL);
+            stream.getTracks().forEach(function(track) {
+              track.stop();
+            });
+          });
+        })
+        .catch(function(err) {
+          console.error('Erreur de capture vidéo:', err);
+        });
+    }
+  
+    function resizeAndPreview(imageData) {
+      // Fonction de redimensionnement de l'image
+    }
+  </script>
+  
+</body>
+
+</html>
